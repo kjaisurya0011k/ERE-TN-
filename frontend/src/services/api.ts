@@ -1,6 +1,10 @@
 // ERE-TN Unified API Client Service
 const rawBaseUrl = (import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || '/api').trim();
-const API_BASE_URL = rawBaseUrl.endsWith('/') ? rawBaseUrl.slice(0, -1) : rawBaseUrl;
+const normalizedUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl.slice(0, -1) : rawBaseUrl;
+// Automatically ensure `/api` prefix is present when an external host URL is supplied without it
+const API_BASE_URL = (normalizedUrl.startsWith('http://') || normalizedUrl.startsWith('https://')) && !normalizedUrl.endsWith('/api')
+  ? `${normalizedUrl}/api`
+  : normalizedUrl;
 
 export interface ApiResponse<T> {
   data?: T;
