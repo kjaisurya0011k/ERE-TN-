@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EDUNOVA - Future Talks</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#eff1f3",
+                    "on-background": "#191c1e",
+                    "surface-bright": "#f7f9fb",
+                    "outline": "#767683",
+                    "tertiary-fixed": "#a8edff",
+                    "on-tertiary-fixed-variant": "#004e5b",
+                    "on-secondary-fixed-variant": "#6a1b9a",
+                    "on-primary-container": "#8690ee",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#00353f",
+                    "surface-tint": "#4c56af",
+                    "surface-container": "#eceef0",
+                    "inverse-surface": "#2d3133",
+                    "on-surface": "#191c1e",
+                    "on-tertiary-fixed": "#001f26",
+                    "secondary": "#843ab4",
+                    "surface-dim": "#d8dadc",
+                    "on-tertiary-container": "#00a6bf",
+                    "background": "#f7f9fb",
+                    "on-primary-fixed-variant": "#343d96",
+                    "surface-variant": "#e0e3e5",
+                    "tertiary": "#001e25",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-container": "#580087",
+                    "outline-variant": "#c6c5d4",
+                    "primary": "#000666",
+                    "primary-fixed": "#e0e0ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#000767",
+                    "inverse-primary": "#bdc2ff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#e4b5ff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#49d7f4",
+                    "surface": "#f7f9fb",
+                    "on-surface-variant": "#454652",
+                    "primary-container": "#1a237e",
+                    "on-secondary-fixed": "#2f004b",
+                    "surface-container-high": "#e6e8ea",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f2f4f6",
+                    "secondary-container": "#cc80fd",
+                    "primary-fixed-dim": "#bdc2ff",
+                    "secondary-fixed": "#f4d9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "stack-md": "24px",
+                    "stack-lg": "48px",
+                    "stack-sm": "12px",
+                    "base": "8px",
+                    "margin-desktop": "40px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "display-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-sm": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "display-lg-mobile": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "caption": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "label-bold": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-md": [
+                            "30px",
+                            {
+                                    "lineHeight": "38px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "caption": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-bold": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-sm shadow-[0px_4px_20px_rgba(26,35,126,0.05)] hidden md:block">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-display-lg font-extrabold text-primary dark:text-secondary-fixed" href="#">EDUNOVA</a>
+<div class="flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Opportunities</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Career</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Counselling</a>
+<a class="text-primary dark:text-secondary-fixed font-bold border-b-2 border-primary dark:border-secondary-fixed pb-1 cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Future Talks</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-80 font-body-md text-body-md" href="#">Learning</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-label-bold text-label-bold px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                    CHECK MY ELIGIBILITY
+                </button>
+<img alt="Student Profile" class="w-10 h-10 rounded-full object-cover border-2 border-primary-fixed" data-alt="A professional headshot of a diverse Indian college student, smiling confidently, well-lit studio lighting against a clean, minimal light gray background. High resolution, corporate modern edtech style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpp1arXnP2sOzmttVzb-YO_2MYgAY3p8smCBBTNYNMNaVW75sD7RpOsh2z7ALUQ2KqPAIrEO3iY2s9x5-4iko7Yte1qjCniqq6Wp4iBDskvzJi_Tw1i4UUmL_ho_xM7P7xbXJx0GNOaNMlpuYq6O-I3moZEAkudh7OpxsBp7nHSSZH_lm2MufvmqzelBKPYg5EXjbkSkzw-6ornQeVywqpsed1onaPuyrDj3XeO5-u8PGyvmEk9nLXig"/>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg min-h-screen">
+<!-- Hero Section -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-stack-lg">
+<div class="max-w-2xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Future Talks</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Discover upcoming sessions with industry leaders, educators, and visionaries shaping the future of education and careers in India.</p>
+</div>
+<div class="w-full md:w-auto flex-1 max-w-md">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border border-outline-variant rounded-xl focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md text-on-surface transition-colors" placeholder="Search sessions, speakers, or topics..." type="text"/>
+</div>
+</div>
+</header>
+<!-- Filters -->
+<div class="mb-stack-lg overflow-x-auto pb-4 hide-scrollbar">
+<div class="flex gap-3 min-w-max">
+<button class="bg-primary text-on-primary font-label-bold text-label-bold px-5 py-2 rounded-full whitespace-nowrap">All</button>
+<button class="bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-bold text-label-bold px-5 py-2 rounded-full border border-outline-variant whitespace-nowrap">College Awareness</button>
+<button class="bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-bold text-label-bold px-5 py-2 rounded-full border border-outline-variant whitespace-nowrap">Emerging Technology</button>
+<button class="bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-bold text-label-bold px-5 py-2 rounded-full border border-outline-variant whitespace-nowrap">Career Guidance</button>
+<button class="bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-bold text-label-bold px-5 py-2 rounded-full border border-outline-variant whitespace-nowrap">Engineering</button>
+<button class="bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-bold text-label-bold px-5 py-2 rounded-full border border-outline-variant whitespace-nowrap">Arts &amp; Science</button>
+<button class="bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors font-label-bold text-label-bold px-5 py-2 rounded-full border border-outline-variant whitespace-nowrap">Other Departments</button>
+</div>
+</div>
+<!-- Upcoming Talks Grid -->
+<section class="mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Upcoming Sessions</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Event Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(26,35,126,0.05)] hover:shadow-[0px_10px_30px_rgba(26,35,126,0.12)] transition-shadow border-t-4 border-primary overflow-hidden flex flex-col h-full group">
+<div class="relative h-48 w-full">
+<img alt="The Future of AI in India" class="w-full h-full object-cover" data-alt="A modern, abstract digital illustration representing Artificial Intelligence in India, featuring glowing neural network nodes blending with traditional Indian architectural motifs, vibrant cyan and deep violet color palette, high-tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_qcXD83RdqSU0sWdGJT9aAZfJCbivTs_w1WXakFb0wuYbkZ8x_rn5xYEI-o0MG-0xAprfxWy7kIg6ilcmBxjWuqEmYHh__UIMKR6Y5TX3NbAxxR7FhSj7zM4U4A4OQeDnk9KdIXE_dBKfguKN5piRbAiNRQkWnFOlfWlh8UiOmIb9GVH7qHl_zT_itxoqesDco11u-Lbvqmkf6_sIOjihajxWKzjnLmvyontP4lfz50iInSkDk-ssgA"/>
+<div class="absolute top-4 left-4 bg-tertiary-fixed text-on-tertiary-fixed-variant font-caption text-caption px-3 py-1 rounded-full font-semibold">
+                            Emerging Tech
+                        </div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 group-hover:text-primary transition-colors">The Future of AI in India</h3>
+<div class="flex items-center gap-3 mb-4">
+<img alt="Speaker" class="w-10 h-10 rounded-full object-cover" data-alt="A professional corporate headshot of a distinguished male tech executive in his 40s, wearing a smart casual blazer, warm lighting, soft blurred background of a modern office space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9eVLaqMch7VNTkjP3nvm_Qk3YSF0bDTz2KD--_I7wOimDUWuMFxgIcoWiNTxLInUNi1Z9S_Gstss84htRJQCuDBuJYr4f0SlHqPbeHJQy0RWV6zTxx_E8DgP_fSOZCsmOZKcdAwQ59AKV-Sw0ZWsfAqpLx-80P9fGWoaxTdYE6AWbgcmlfP_k_piZQrzYTVHXHnKIHlJsi8b-Yb_EHeFAX6HUPZo9vDOzIGPqClocbAEqJh9k7j5TJg"/>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Dr. Rajesh Kumar</p>
+<p class="font-caption text-caption text-on-surface-variant">Chief AI Scientist, TechCorp India</p>
+</div>
+</div>
+<div class="mt-auto space-y-2 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-xl" data-icon="calendar_today">calendar_today</span>
+<span>Oct 24, 2024</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-xl" data-icon="schedule">schedule</span>
+<span>10:00 AM - 11:30 AM (90 Min)</span>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-secondary text-on-primary font-label-bold text-label-bold py-3 rounded-lg hover:opacity-90 transition-opacity">
+                            Register Now
+                        </button>
+</div>
+</article>
+<!-- Event Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(26,35,126,0.05)] hover:shadow-[0px_10px_30px_rgba(26,35,126,0.12)] transition-shadow border-t-4 border-primary overflow-hidden flex flex-col h-full group">
+<div class="relative h-48 w-full">
+<img alt="Choosing the Right Engineering Branch" class="w-full h-full object-cover" data-alt="A clean, minimalist 3D rendering of various engineering tools and symbols (gears, microchips, architectural blueprints) floating in a pristine white space with subtle indigo and violet lighting accents, modern academic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Y2dLgAR-WLtCR8LLJ395H0jAuisDBAvkd27DbAKdVDBCSZwGBpatPt8Iw14Ulyqw6z-Me4yUoWekOtwYjdMdyjtDCmM92ahZV_oDK4AEk9_R44Iz1P8mPaX9-fIIUioiwpHDRrc-3pFGs5Gcl-wah7D2mSaLPZSSiIHfSra1kbilTEi7YHW-Qeh3du1ojNm8b1_n5a_Wba92bE2VxrRdJFkj8OgVr9Fp35L72yHjAwVZgDhh9ooDJA"/>
+<div class="absolute top-4 left-4 bg-primary-fixed text-on-primary-fixed-variant font-caption text-caption px-3 py-1 rounded-full font-semibold">
+                            Engineering Awareness
+                        </div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 group-hover:text-primary transition-colors">Choosing the Right Engineering Branch</h3>
+<div class="flex items-center gap-3 mb-4">
+<img alt="Speaker" class="w-10 h-10 rounded-full object-cover" data-alt="A friendly, approachable portrait of a female academic counselor in her 30s, wearing a neat professional blouse, bright natural lighting, set against a blurred university campus background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc1a3p_BVBTHsT6qKlvgDnBSz0H01QOzxAKoJhJuaKX999_jByx-TRw8AeFxOeWd4Lm3IO2d7cZymHGpiUtISg4vM-VBysM29CcEb_hOVMt4vpCOCmgPMF7TsOudqejvOtWL8VbJZiQNLrGMInBhZFYIkymmfc25L5PIR6IjeLplsXaeicqWeQsiN-TGlhrCw4ofUis_Gj4c5v8A0OKhI2680SrVonv8oFpiwgZLmD5Vhr216Dp4DDlw"/>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Prof. Anita Desai</p>
+<p class="font-caption text-caption text-on-surface-variant">Dean of Admissions, Elite Institute</p>
+</div>
+</div>
+<div class="mt-auto space-y-2 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-xl" data-icon="calendar_today">calendar_today</span>
+<span>Oct 26, 2024</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-xl" data-icon="schedule">schedule</span>
+<span>2:00 PM - 3:00 PM (60 Min)</span>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-secondary text-on-primary font-label-bold text-label-bold py-3 rounded-lg hover:opacity-90 transition-opacity">
+                            Register Now
+                        </button>
+</div>
+</article>
+<!-- Event Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(26,35,126,0.05)] hover:shadow-[0px_10px_30px_rgba(26,35,126,0.12)] transition-shadow border-t-4 border-primary overflow-hidden flex flex-col h-full group">
+<div class="relative h-48 w-full">
+<img alt="Liberal Arts: Careers of Tomorrow" class="w-full h-full object-cover" data-alt="An artistic composition featuring a blend of classical art elements (like a marble bust or paint palette) merging seamlessly with modern digital interfaces, warm inviting tones of plum and deep violet, sophisticated educational theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWfMMNoTFd89rlcqTtZYLqMi4FDoB-3ezxvLi35sp9UCS9-7sYZqyuZkmCp_h0qPDHx5-ATKSXRqouMk3mL54BRY0nbbZ44SpmjBNrsPKBiSNNq8tFw2xuu2NC41QpxPNCFq9PMasuHmi6INZZFZpZOHzIm5-e_hFm69mAuE-cuGy9kcNtv3PcvGTogV4sWusDfmxO2qMWB6plpcXeyiWk63A3J0PEqJaXo6c4B9yI1Fgb6mSqM32tFw"/>
+<div class="absolute top-4 left-4 bg-secondary-fixed text-on-secondary-fixed-variant font-caption text-caption px-3 py-1 rounded-full font-semibold">
+                            Arts &amp; Science
+                        </div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 group-hover:text-primary transition-colors">Liberal Arts: Careers of Tomorrow</h3>
+<div class="flex items-center gap-3 mb-4">
+<img alt="Speaker" class="w-10 h-10 rounded-full object-cover" data-alt="A portrait of an expressive, creative young male professional in his late 20s, wearing stylish glasses and a casual button-down shirt, soft creative lighting, minimal art gallery background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6PGGZwDZo9Y4fEWCgjpv99JBq1-oq8ntGA8H5xjZSvIAjZrsvzzhIGCE_l_Kpq8WhumKY5siNWU88hdgAUYTV0CoNZuokrF_4nCr35lthdlEecUPHV5jvWuMLRv4wz9FS_9Bhkb6DI-MVdUNI8n_-MpTExxQsApNVm1FA6BUs0F23zDMVP3Tk-D1P5SmnaSYwC9oCipIkIdOlyHw9hs_NDiHQNJy-PwLxUgGi3FYU-xPZ9NJuuH1TBA"/>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Vikram Sharma</p>
+<p class="font-caption text-caption text-on-surface-variant">Author &amp; Cultural Historian</p>
+</div>
+</div>
+<div class="mt-auto space-y-2 mb-6">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-xl" data-icon="calendar_today">calendar_today</span>
+<span>Oct 28, 2024</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-xl" data-icon="schedule">schedule</span>
+<span>4:00 PM - 5:00 PM (60 Min)</span>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-secondary text-on-primary font-label-bold text-label-bold py-3 rounded-lg hover:opacity-90 transition-opacity">
+                            Register Now
+                        </button>
+</div>
+</article>
+</div>
+</section>
+<!-- Past Talks Section -->
+<section class="mt-stack-lg border-t border-outline-variant pt-stack-md">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Past Talks Library</h2>
+<a class="text-primary font-label-bold text-label-bold hover:underline flex items-center gap-1" href="#">
+                    View All <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Past Card 1 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="relative h-32 w-full bg-surface-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors" data-icon="play_circle">play_circle</span>
+<img alt="Past Event" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60" data-alt="A muted, slightly desaturated image of a corporate presentation stage with a large screen displaying charts, a silhouette of a speaker in the foreground, professional conference setting, subtle indigo overlay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMQ5gi0p1zMWF3hDaJHvpMLT2BzEdRTB1UFJ_WMTVefMzUtX27eNjXAKS9JzRgO4WDSPiNyUj6Mnhy3JW3itWYpY6qIRX28kTUSBUdBxamPt0ZWd2ypyy6Nl4HhQ_t-hwTcffXCEJ0BIbuHo1HDnSWUD3czZ6O6P56GBs8zr-arn6DbFMXCSyiY5t_Bi3xZS4XFQZ3c8DyTANuZbG4X6p39H38mwRVrd4UNQIeMsLdYkEPTgsnOxixBg"/>
+</div>
+<div class="p-4">
+<div class="text-xs font-semibold text-secondary mb-1">Career Guidance</div>
+<h4 class="font-body-md text-body-md font-semibold text-on-surface line-clamp-2 mb-2">Navigating the Modern Job Market Post-Graduation</h4>
+<p class="font-caption text-caption text-on-surface-variant">Recorded • Sep 15, 2024</p>
+</div>
+</div>
+<!-- Past Card 2 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="relative h-32 w-full bg-surface-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant group-hover:text-primary transition-colors" data-icon="play_circle">play_circle</span>
+<img alt="Past Event" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60" data-alt="A clean top-down view of a modern student desk with a sleek laptop, open notebooks, and a cup of coffee, well-lit natural light, modern educational lifestyle aesthetic, subtle cyan overlay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZiOgsMR22DwroGsHxgMWZcDIqxowk7yA4tgETC_RcJ_K6rNBPQk0awIDEad9pDf3LxiquqUHHCXBQl_jMKxZIaGxeXQOZa8R3xhz01uOqIDxjn0NpMGcoDX7TseDYD60RyGOzHM0HdVbMe4_LOAATCPPk9-klJYEbb11FLoyCkBM2_MzfIYgZLjF478IkET2VN9mbcaStvwZcQMdbX3wsMOlG8NVnkqWxEP81gH-yG--B4UpKFK0_vQ"/>
+</div>
+<div class="p-4">
+<div class="text-xs font-semibold text-tertiary-fixed-dim mb-1">College Awareness</div>
+<h4 class="font-body-md text-body-md font-semibold text-on-surface line-clamp-2 mb-2">Maximizing Your First Year Experience on Campus</h4>
+<p class="font-caption text-caption text-on-surface-variant">Recorded • Sep 02, 2024</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="bg-surface dark:bg-surface-container-highest shadow-lg shadow-[0px_-4px_20px_rgba(26,35,126,0.05)] fixed bottom-0 w-full z-50 rounded-t-xl flex justify-around items-center px-4 py-2 pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-high scale-95 transition-transform font-caption text-caption p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-secondary-fixed font-bold active:bg-surface-container-high scale-95 transition-transform font-caption text-caption p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="search">search</span>
+<span>Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-high scale-95 transition-transform font-caption text-caption p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="verified_user">verified_user</span>
+<span>Eligibility</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-high scale-95 transition-transform font-caption text-caption p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="chat_bubble">chat_bubble</span>
+<span>Counselling</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-high scale-95 transition-transform font-caption text-caption p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span>Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-tertiary dark:bg-surface-dim w-full py-stack-lg mt-stack-lg hidden md:block">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop">
+<div class="col-span-1 md:col-span-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-tertiary dark:text-on-surface mb-4">EDUNOVA</h3>
+<p class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80">© 2024 EDUNOVA. Made for Students of India.</p>
+</div>
+<div class="col-span-1 md:col-span-3 flex justify-end items-center gap-6">
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Support</a>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Privacy</a>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Terms</a>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Facebook</a>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<style>
+        /* Hide scrollbar for horizontal scrolling but allow scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

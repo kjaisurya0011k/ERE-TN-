@@ -1,0 +1,16 @@
+{
+  "name": "ERE-TN | Education Revolution & Evolution – Tamil Nadu",
+  "short_name": "ERE-TN",
+  "description": "ERE-TN helps Tamil Nadu students discover education opportunities, scholarships, government schemes, career paths, skills, mentoring and opportunities.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000666",
+  "background_color": "#F7F9FB",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "48x48",
+      "type": "image/svg+xml"
+    }
+  ]
+}

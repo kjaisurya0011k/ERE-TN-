@@ -1,0 +1,15 @@
+package com.edunova.domain;
+
+public enum GovernmentLevel {
+    CENTRAL,
+    TAMIL_NADU,
+    OTHER_STATE,
+    CORPORATE_FOUNDATION,
+    NGO_INSTITUTE,
+    INSTITUTION,
+    INSTITUTION_MERIT,
+    STATE_GOVERNMENT,
+    NON_PROFIT_TRUST,
+    CENTRAL_GOVERNMENT,
+    CORPORATE_CSR
+}

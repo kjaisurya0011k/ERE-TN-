@@ -1,0 +1,44 @@
+# Backend
+backend/target/
+backend/.mvn/
+*.class
+*.jar
+!**/src/main/**
+!**/src/test/**
+
+# Dependencies & Build
+node_modules/
+dist/
+*.zip
+
+# Frontend
+frontend/.env.local
+frontend/.env.*.local
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# JVM crash files
+hs_err_pid*.log
+replay_pid*.log
+
+# Environment secrets (never commit these)
+.env
+*.env
+application-prod.yml
+application-secret.yml

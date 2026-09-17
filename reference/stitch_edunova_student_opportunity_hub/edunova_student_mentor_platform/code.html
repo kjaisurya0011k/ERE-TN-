@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EDUNOVA - Your Opportunities. Your Future. One Platform.</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#cc80fd",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#4c56af",
+                        "secondary-fixed-dim": "#e4b5ff",
+                        "tertiary-container": "#00353f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#2f004b",
+                        "surface-variant": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#8690ee",
+                        "secondary": "#843ab4",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary-fixed-variant": "#6a1b9a",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-fixed": "#001f26",
+                        "outline": "#767683",
+                        "on-tertiary-container": "#00a6bf",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#a8edff",
+                        "primary": "#000666",
+                        "on-background": "#191c1e",
+                        "primary-fixed": "#e0e0ff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9fb",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-container": "#1a237e",
+                        "surface-container": "#eceef0",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface-variant": "#454652",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "tertiary-fixed-dim": "#49d7f4",
+                        "outline-variant": "#c6c5d4",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary-fixed": "#f4d9ff",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2d3133",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#001e25",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#bdc2ff",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#343d96",
+                        "on-primary-fixed": "#000767",
+                        "on-tertiary-fixed-variant": "#004e5b",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-container": "#580087"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "stack-md": "24px",
+                        "gutter": "24px",
+                        "stack-sm": "12px",
+                        "margin-desktop": "40px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Inter"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["30px", {"lineHeight": "38px", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f7f9fb 0%, #e0e0ff 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto py-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<span class="font-display-lg text-display-lg font-extrabold text-primary dark:text-secondary-fixed text-[24px]">EDUNOVA</span>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-body-md text-body-md text-primary dark:text-secondary-fixed font-bold border-b-2 border-primary dark:border-secondary-fixed pb-1 cursor-pointer active:opacity-80" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-80" href="#">Opportunities</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-80" href="#">Career</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-80" href="#">Counselling</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-80" href="#">Future Talks</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors cursor-pointer active:opacity-80" href="#">Learning</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-label-bold text-label-bold hover:opacity-90 transition-opacity shadow-[0px_4px_20px_rgba(26,35,126,0.15)]">
+                    CHECK MY ELIGIBILITY
+                </button>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">language</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+<img alt="Student Profile" class="w-10 h-10 rounded-full border-2 border-primary/20 object-cover" data-alt="A close-up, highly detailed portrait of a diverse college student looking optimistic and professional, set against a bright, modern university campus background in daylight. The aesthetic is clean, corporate edtech style with soft, flattering lighting and shallow depth of field to emphasize the face while subtly showing educational context in the blur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEfO165_jhbC0J8bImW01A3j-3oM-5VKTB7nmTFmG_FshHoJe7niQ9RTzuCmujDwLYn7xnWjutgZmsL9AU-keKaS8Aclq1T36J6psJWbIQIYK1EKSODZgndxOhO_SrfqRRNBjnb28RxzFyRM2ZkmcLY9ymLnWpnzHs6_hsLe7m5KyG81NZFGrscyxwaXj8xph2VvabqjpBnxOvYFi3v7k7HqnR-217ujZP5zTiAxkpaXR-Tip8FFxy_w"/>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-32 overflow-hidden hero-gradient">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center relative z-10">
+<div class="flex flex-col gap-stack-sm md:gap-stack-md">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">
+                        Your Opportunities. <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Your Future.</span><br/>One Platform.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Discover scholarships, government schemes, career opportunities and guidance personalized for you. Navigate your educational journey with confidence.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-label-bold text-label-bold hover:shadow-[0px_10px_30px_rgba(26,35,126,0.2)] transition-all duration-300 transform hover:-translate-y-1">
+                            🎯 Check My Eligibility
+                        </button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary text-primary rounded-lg font-label-bold text-label-bold hover:bg-primary/5 transition-colors">
+                            Explore Opportunities
+                        </button>
+</div>
+<div class="mt-8 flex items-center gap-4 text-sm text-on-surface-variant">
+<div class="flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="Small circular avatar showing a young south asian female student smiling brightly in a sunny outdoor setting, realistic photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-hi15Nx_0iU-i26OAnyxA8L6_K7-YIopya7XkUYT_4X7n6ABQRxJ2u4QQI2VtyBtHm0HG36UlvNJURjrSIe-Ky_pfUAXWCbJDCCl-MWucChv8_yCaOlX0tcO5LXjM2caWde067LD7T-q-V9Ilr3oDs68LmI0gM1_Fi94aApu54eXvIq4Hx6KjRHeJzaVrgB4Z2A_sPql8OnLrTL3auaV2GSOySQM8ndZPt1nop_1j4EoUtdL0FySZPw"/>
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="Small circular avatar showing a young male student with glasses looking thoughtful in a modern library, realistic photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACcxuVaalzxbtpvGPolVF3YEEZbbC8drOCAh8txOxy9imoLhvrKSO-qqE--q9EJAvGmz-M4CbA0UNqfdP2ryfNuYR24f6Kp1Wd6uHZzVOiBBCWfM9RnccECD7Mg1O0J4RzmwXu8RM_2q-vnzjxfK2JZHdu6MHKPa2Rc_Ncm-WyV3KhwHxlR-oB1pXeM5W6arZsbGJf7sdjHWcxj9fGZooKNQ_IR9YTVbtcDIKltcTKCqu45Vvva8zX5Q"/>
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="Small circular avatar showing a professional female mentor in business casual attire smiling in a well-lit office, realistic photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv7ys0snFCE8O7nEySIWtoCDVrx2D5iwac1dc3Q6om1ZO9zyYPLGxJWxVIYrpQ2JcWKjKRwdiltBWyUNCA-eeo90de7KcIvYN8vLRQvyGzAbgEarmM2I7ovlTKj0uaYz8zDj3pUrpNzLhB8snMpjUhVV1-3JMMkn4wseVWby0cqq-Eo5HB-veuMyenWEu0ZQE6j4pz5i7lv-z-3AEFBZak3fcJGwIY7D-RQD7IDJbgbH2MfDsOk-n4rg"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-variant flex items-center justify-center text-[10px] font-bold text-on-surface-variant">10k+</div>
+</div>
+<p class="font-body-md text-body-md">Join thousands of students achieving their goals.</p>
+</div>
+</div>
+<div class="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square flex items-center justify-center">
+<!-- Abstract Decorative Elements -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-fixed to-secondary-fixed rounded-full blur-3xl opacity-50 transform scale-90"></div>
+<!-- Dashboard Mockup -->
+<div class="relative w-full max-w-md mx-auto bg-white rounded-2xl shadow-[0px_20px_40px_rgba(26,35,126,0.1)] border border-surface-variant overflow-hidden z-20 transform rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
+<!-- Mockup Header -->
+<div class="bg-surface-container-lowest border-b border-surface-variant p-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-container"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-container"></div>
+</div>
+<div class="text-xs font-label-bold text-on-surface-variant">Dashboard</div>
+</div>
+<!-- Mockup Content -->
+<div class="p-6 bg-surface-container-low space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-background">Welcome, Student</h3>
+<p class="text-caption font-caption text-on-surface-variant">Your personalized matches</p>
+</div>
+<div class="w-10 h-10 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center font-bold">98%</div>
+</div>
+<!-- Mockup Cards -->
+<div class="bg-white p-4 rounded-xl shadow-sm border-t-4 border-secondary">
+<div class="flex justify-between items-start mb-2">
+<span class="px-2 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-[10px] font-bold uppercase">Scholarship</span>
+<span class="material-symbols-outlined text-outline text-sm">bookmark</span>
+</div>
+<h4 class="font-label-bold text-label-bold text-on-background mb-1">National Merit Grant 2024</h4>
+<p class="text-caption font-caption text-on-surface-variant mb-3">Deadline in 15 days</p>
+<div class="w-full bg-surface-variant rounded-full h-1.5 mb-2">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 75%"></div>
+</div>
+<p class="text-[10px] text-right text-on-surface-variant">75% Match</p>
+</div>
+<div class="bg-white p-4 rounded-xl shadow-sm border-t-4 border-primary">
+<div class="flex justify-between items-start mb-2">
+<span class="px-2 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-[10px] font-bold uppercase">Gov Scheme</span>
+<span class="material-symbols-outlined text-outline text-sm">bookmark</span>
+</div>
+<h4 class="font-label-bold text-label-bold text-on-background mb-1">Tech Innovator Fellowship</h4>
+<p class="text-caption font-caption text-on-surface-variant mb-3">Open for applications</p>
+<button class="w-full py-1.5 bg-primary text-white text-xs rounded-md font-medium">Apply Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trusted By Section -->
+<section class="py-stack-md bg-white border-b border-surface-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<p class="font-caption text-caption text-on-surface-variant uppercase tracking-widest mb-6">Trusted by leading educational organizations</p>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Placeholder Logos -->
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm font-bold text-on-surface"><span class="material-symbols-outlined text-3xl">account_balance</span> EduCorp</div>
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm font-bold text-on-surface"><span class="material-symbols-outlined text-3xl">menu_book</span> ScholarSys</div>
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm font-bold text-on-surface"><span class="material-symbols-outlined text-3xl">public</span> GlobalUni</div>
+<div class="flex items-center gap-2 font-headline-sm text-headline-sm font-bold text-on-surface"><span class="material-symbols-outlined text-3xl">workspace_premium</span> MeritTrust</div>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="font-headline-md text-headline-md md:text-[36px] text-on-background mb-4">Finding the Right Opportunity Shouldn't Be Difficult.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">The current landscape is fragmented and confusing. We're here to fix that.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-white p-6 rounded-xl shadow-[0px_4px_20px_rgba(26,35,126,0.05)] hover:shadow-[0px_10px_30px_rgba(26,35,126,0.12)] transition-shadow group">
+<div class="w-12 h-12 bg-error-container text-error rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">search_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Scattered Info</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Information is spread across hundreds of websites, making it hard to find what's relevant to you.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-6 rounded-xl shadow-[0px_4px_20px_rgba(26,35,126,0.05)] hover:shadow-[0px_10px_30px_rgba(26,35,126,0.12)] transition-shadow group">
+<div class="w-12 h-12 bg-primary-fixed text-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">rule</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Confusing Eligibility</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Complex criteria make it difficult to know if you actually qualify before spending hours applying.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-6 rounded-xl shadow-[0px_4px_20px_rgba(26,35,126,0.05)] hover:shadow-[0px_10px_30px_rgba(26,35,126,0.12)] transition-shadow group">
+<div class="w-12 h-12 bg-secondary-fixed text-secondary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">event_busy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Missed Deadlines</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Without a centralized tracking system, crucial application dates slip through the cracks.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-white p-6 rounded-xl shadow-[0px_4px_20px_rgba(26,35,126,0.05)] hover:shadow-[0px_10px_30px_rgba(26,35,126,0.12)] transition-shadow group">
+<div class="w-12 h-12 bg-tertiary-fixed text-tertiary-container rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">help_center</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Limited Guidance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Lack of personalized mentorship leaves students guessing about their best career moves.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Solution Section -->
+<section class="py-stack-lg bg-white overflow-hidden relative">
+<div class="absolute inset-0 bg-primary/5 pattern-dots opacity-50"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="font-headline-md text-headline-md md:text-[36px] text-on-background mb-4">One Platform. Multiple Opportunities.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Our intelligent system guides you through every step of your educational journey.</p>
+</div>
+<!-- Visual Flow -->
+<div class="relative">
+<!-- Connecting Line -->
+<div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-surface-variant -translate-y-1/2 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-white rounded-full shadow-[0px_10px_30px_rgba(26,35,126,0.1)] flex items-center justify-center border-4 border-primary mb-6">
+<span class="material-symbols-outlined text-3xl text-primary">person_search</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">1. Discover &amp; Match</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Create your profile and let our algorithm match you with the right opportunities.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-white rounded-full shadow-[0px_10px_30px_rgba(26,35,126,0.1)] flex items-center justify-center border-4 border-secondary mb-6">
+<span class="material-symbols-outlined text-3xl text-secondary">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">2. Check Eligibility</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Instantly verify if you meet the criteria before starting any application process.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-white rounded-full shadow-[0px_10px_30px_rgba(26,35,126,0.1)] flex items-center justify-center border-4 border-[#00B8D4] mb-6">
+<span class="material-symbols-outlined text-3xl text-[#00B8D4]">rocket_launch</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">3. Apply &amp; Achieve</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Submit applications seamlessly, track progress, and reach your goals.</p>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-label-bold text-label-bold hover:shadow-[0px_10px_30px_rgba(26,35,126,0.2)] transition-all duration-300">
+                        Start Your Journey Today
+                    </button>
+</div>
+</div>
+</section>
+<!-- Featured Opportunities -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-background mb-2">Featured Opportunities</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Curated programs to accelerate your career.</p>
+</div>
+<button class="font-label-bold text-label-bold text-primary hover:text-secondary transition-colors flex items-center gap-1">
+                        View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Opportunity Card 1 -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(26,35,126,0.05)] border-t-4 border-primary overflow-hidden flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+<div class="p-6 flex-grow">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-xs font-bold tracking-wide">SCHOLARSHIP</span>
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">account_balance</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Global Leaders Undergraduate Fund</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Full tuition coverage for exceptional undergraduate students demonstrating leadership potential.</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">payments</span>
+<span>Up to $50,000 / year</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-error">calendar_today</span>
+<span>Deadline: Oct 30, 2024</span>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-surface-variant bg-surface-container-lowest flex justify-between items-center">
+<span class="text-xs font-medium text-secondary">High Match Probability</span>
+<button class="px-4 py-2 bg-white border border-outline-variant text-primary rounded-lg font-label-bold text-label-bold hover:bg-surface-container-low transition-colors">Details</button>
+</div>
+</div>
+<!-- Opportunity Card 2 -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(26,35,126,0.05)] border-t-4 border-secondary overflow-hidden flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+<div class="p-6 flex-grow">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-xs font-bold tracking-wide">GOV SCHEME</span>
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">gavel</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Women in Tech Initiative 2024</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">Government-backed grant providing financial assistance and mentorship for women pursuing STEM degrees.</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">payments</span>
+<span>One-time grant of $10,000</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-error">calendar_today</span>
+<span>Deadline: Nov 15, 2024</span>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-surface-variant bg-surface-container-lowest flex justify-between items-center">
+<span class="text-xs font-medium text-surface-variant">Login to check match</span>
+<button class="px-4 py-2 bg-white border border-outline-variant text-primary rounded-lg font-label-bold text-label-bold hover:bg-surface-container-low transition-colors">Details</button>
+</div>
+</div>
+<!-- Opportunity Card 3 -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(26,35,126,0.05)] border-t-4 border-[#00B8D4] overflow-hidden flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 hidden md:flex lg:flex">
+<div class="p-6 flex-grow">
+<div class="flex justify-between items-start mb-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-bold tracking-wide">FELLOWSHIP</span>
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">science</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-2">Climate Action Research Fellowship</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2">A 6-month fully funded research fellowship focusing on sustainable energy solutions.</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-secondary">payments</span>
+<span>Monthly stipend + Travel</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-error">calendar_today</span>
+<span>Deadline: Dec 01, 2024</span>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-surface-variant bg-surface-container-lowest flex justify-between items-center">
+<span class="text-xs font-medium text-surface-variant">Login to check match</span>
+<button class="px-4 py-2 bg-white border border-outline-variant text-primary rounded-lg font-label-bold text-label-bold hover:bg-surface-container-low transition-colors">Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe bg-surface dark:bg-surface-container-highest shadow-[0px_-4px_20px_rgba(26,35,126,0.05)] z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-primary dark:text-secondary-fixed font-bold active:bg-surface-container-high scale-95 transition-transform p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-caption text-caption mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-high scale-95 transition-transform p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-caption text-caption mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-high scale-95 transition-transform p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-caption text-caption mt-1">Eligibility</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-high scale-95 transition-transform p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="font-caption text-caption mt-1">Counselling</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant active:bg-surface-container-high scale-95 transition-transform p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-caption text-caption mt-1">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-tertiary dark:bg-surface-dim flat no shadows mb-16 md:mb-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop">
+<div class="md:col-span-1 flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm font-bold text-on-tertiary dark:text-on-surface">EDUNOVA</span>
+<p class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80">Empowering the next generation with the right opportunities.</p>
+</div>
+<div class="md:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-label-bold text-on-tertiary/60">Platform</span>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Explore</a>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Check Eligibility</a>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Counselling</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-label-bold text-on-tertiary/60">Legal</span>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-tertiary/80 dark:text-on-surface/80 hover:text-tertiary-fixed dark:hover:text-primary-container transition-opacity" href="#">Support</a>
+</div>
+<div class="flex flex-col gap-3 col-span-2 sm:col-span-1">
+<span class="font-label-bold text-label-bold text-on-tertiary/60">Connect</span>
+<div class="flex gap-4">
+<a class="text-on-tertiary/80 hover:text-tertiary-fixed transition-opacity" href="#">Facebook</a>
+<a class="text-on-tertiary/80 hover:text-tertiary-fixed transition-opacity" href="#">LinkedIn</a>
+<a class="text-on-tertiary/80 hover:text-tertiary-fixed transition-opacity" href="#">Twitter</a>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 border-t border-on-tertiary/20 mt-8 pt-8 text-center">
+<p class="font-body-md text-body-md text-on-tertiary/60">© 2024 EDUNOVA. Made for Students of India.</p>
+</div>
+</div>
+</footer>
+</body></html>

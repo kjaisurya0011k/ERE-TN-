@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Dashboard - EDUNOVA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-container": "#cc80fd",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#4c56af",
+                        "secondary-fixed-dim": "#e4b5ff",
+                        "tertiary-container": "#00353f",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#2f004b",
+                        "surface-variant": "#e0e3e5",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#8690ee",
+                        "secondary": "#843ab4",
+                        "inverse-on-surface": "#eff1f3",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary-fixed-variant": "#6a1b9a",
+                        "surface": "#f7f9fb",
+                        "on-tertiary-fixed": "#001f26",
+                        "outline": "#767683",
+                        "on-tertiary-container": "#00a6bf",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#a8edff",
+                        "primary": "#000666",
+                        "on-background": "#191c1e",
+                        "primary-fixed": "#e0e0ff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9fb",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-container": "#1a237e",
+                        "surface-container": "#eceef0",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface-variant": "#454652",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "tertiary-fixed-dim": "#49d7f4",
+                        "outline-variant": "#c6c5d4",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary-fixed": "#f4d9ff",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2d3133",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#001e25",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#bdc2ff",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#343d96",
+                        "on-primary-fixed": "#000767",
+                        "on-tertiary-fixed-variant": "#004e5b",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-container": "#580087"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "stack-md": "24px",
+                        "gutter": "24px",
+                        "stack-sm": "12px",
+                        "margin-desktop": "40px",
+                        "stack-lg": "48px"
+                    },
+                    fontFamily: {
+                        "caption": ["Inter"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    fontSize: {
+                        "caption": ["12px", { lineHeight: "16px", fontWeight: "400" }],
+                        "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "800" }],
+                        "headline-md": ["30px", { lineHeight: "38px", fontWeight: "700" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "800" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "label-bold": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #000666 0%, #843ab4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased flex">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container-low shadow-md p-stack-sm z-50">
+<div class="flex items-center gap-3 mb-8 px-4 pt-4">
+<div class="w-10 h-10 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, professional headshot of a smiling Indian college student wearing business casual attire. The lighting is bright and even, set against a solid light gray background. This image is used as an avatar in a modern light-mode educational platform, emphasizing approachability and academic focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT_cnMoKnDsa4_CUepQlD5pC42XXONNFqhicG1rgUG9Cc4YmEAB3WiGAet7WaIn92PIiLcuos6vLAmJe4UytAI6A4eswwuQmRK-CIq1u5lfdHb13ivW16H3sA5fLFfm5P8KquCqaOQXTZuoEDlUmCRXQkaG7Zr8ixl6dfLG8OtkaXNWbCAhIplLI_AflaOplBLEVmDzflpjcCQbJ4iwGZc5DB4N3TaL2ZNHE4hvQ4ppgMmz0SvGwkucA"/>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-extrabold text-primary">EDUNOVA</h1>
+<p class="font-caption text-caption text-on-surface-variant">Student Dashboard</p>
+</div>
+</div>
+<ul class="flex flex-col gap-2 flex-grow font-label-bold text-label-bold text-primary">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">assignment</span>
+                    My Applications
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+                    Saved Opportunities
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">trending_up</span>
+                    Learning Progress
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+</li>
+</ul>
+<div class="mt-auto flex flex-col gap-4">
+<button class="w-full py-3 px-4 bg-gradient-to-r from-primary to-secondary text-on-primary rounded-lg font-label-bold text-label-bold shadow-[0px_4px_20px_rgba(26,35,126,0.12)] hover:shadow-[0px_10px_30px_rgba(26,35,126,0.2)] transition-shadow">
+                Upgrade Plan
+            </button>
+<ul class="flex flex-col gap-2 font-label-bold text-label-bold text-on-surface-variant">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">help</span>
+                        Help
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 hover:bg-surface-container-high rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined">logout</span>
+                        Logout
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 pb-safe bg-surface shadow-[0px_-4px_20px_rgba(26,35,126,0.05)] z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-primary font-bold scale-95 transition-transform font-caption text-caption" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+            Home
+        </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant scale-95 transition-transform font-caption text-caption hover:bg-surface-container-high p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">search</span>
+            Explore
+        </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant scale-95 transition-transform font-caption text-caption hover:bg-surface-container-high p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">verified_user</span>
+            Eligibility
+        </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant scale-95 transition-transform font-caption text-caption hover:bg-surface-container-high p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+            Counselling
+        </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant scale-95 transition-transform font-caption text-caption hover:bg-surface-container-high p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">person</span>
+            Profile
+        </a>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-grow md:ml-64 p-margin-mobile md:p-margin-desktop max-w-container-max mx-auto w-full pb-32 md:pb-margin-desktop">
+<!-- Top Bar -->
+<header class="flex justify-between items-center mb-stack-lg sticky top-0 bg-background/90 backdrop-blur-md z-40 py-4 -mt-4">
+<div class="hidden md:flex relative w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant focus:border-primary rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary transition-colors" placeholder="Search opportunities, courses..." type="text"/>
+</div>
+<div class="flex items-center gap-4 ml-auto">
+<button class="text-on-surface-variant hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-surface-container-high hidden md:block">
+<img class="w-full h-full object-cover" data-alt="A clean, professional headshot of a smiling Indian college student wearing business casual attire. The lighting is bright and even, set against a solid light gray background. This image is used as an avatar in a modern light-mode educational platform, emphasizing approachability and academic focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAegimsWyCEuvxkHKUklpgYOy1q0qxl66ZDyiGx3ofvY-x_uPc9Vs5miIY26MJjbokSVGJOcINhsg-jP4WJZMZ7FOMRhOkNjHbm_gtJ7oab2CQExgSXtrKhcdcTxhRq1ipc7LrpV3SdSsTYr7VCR5qKcLZGYAZSjze5Lhy_Z3rjp98u5Ejgy_B5LPgMqZwZ3R3sJpBjSH3uMrh0gB5EM6BIKVpJgVPCqqxeOJDEMAJsRiLi0rW4vyqtA"/>
+</div>
+</div>
+</header>
+<!-- Welcome Section -->
+<section class="mb-stack-lg">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-2">Good Morning, Rahul 👋</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Here are opportunities and guidance selected for you.</p>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main CTA & Stats (Left Column) -->
+<div class="md:col-span-8 flex flex-col gap-gutter">
+<!-- CTA Card -->
+<div class="bg-gradient-to-br from-primary to-primary-container rounded-xl p-8 text-on-primary shadow-[0px_10px_30px_rgba(26,35,126,0.12)] relative overflow-hidden flex flex-col justify-between h-full min-h-[240px]">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+<div class="relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-on-primary/20 rounded-full font-label-bold text-label-bold mb-4 backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                            Matches Found
+                        </div>
+<h3 class="font-headline-md text-headline-md mb-2">We found 8 opportunities that may be relevant to you.</h3>
+</div>
+<button class="relative z-10 self-start mt-6 bg-[#00B8D4] text-[#1A237E] font-label-bold text-label-bold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-shadow flex items-center gap-2">
+                        🎯 CHECK MY ELIGIBILITY
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Quick Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,35,126,0.05)] flex items-center gap-4">
+<div class="relative w-16 h-16 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="80, 100" stroke-width="4"></path>
+</svg>
+<span class="absolute font-label-bold text-label-bold text-primary">80%</span>
+</div>
+<div>
+<p class="font-caption text-caption text-on-surface-variant">Profile</p>
+<p class="font-headline-sm text-headline-sm text-on-background">Completion</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,35,126,0.05)] flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">bookmark</span>
+<span class="font-caption text-caption">Saved</span>
+</div>
+<p class="font-headline-md text-headline-md text-primary">12</p>
+</div>
+<div class="bg-secondary text-on-secondary rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,35,126,0.05)] flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-1 text-on-secondary/80">
+<span class="material-symbols-outlined text-sm">assignment</span>
+<span class="font-caption text-caption">Applications</span>
+</div>
+<p class="font-headline-md text-headline-md">3</p>
+</div>
+</div>
+</div>
+<!-- Side Widgets (Right Column) -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<!-- Future Talks -->
+<div class="bg-surface-container-lowest border-t-4 border-secondary rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,35,126,0.05)]">
+<h4 class="font-headline-sm text-headline-sm text-on-background mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">event</span>
+                        Upcoming Future Talks
+                    </h4>
+<div class="relative h-32 rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="A modern, abstract digital graphic representing Artificial Intelligence. Featuring glowing neural network nodes and binary streams over a deep indigo background. The image feels futuristic, clean, and appropriate for a high-end tech webinar banner in a modern educational platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgtzZYQWn7wVFzqRXnKzaN5MZpwFzP9eLiBkm_yiCgCVd9sBcn277gzMPTdFwZeZMDmKcAMAgKj0BDJ86z16_jjdIuVtorwwyoE33bBoUq75rbzF-rQ8QcHlFsb62dwc2E6-m1CA2jUeU7XBf1Op0Y_uMj_NTH8wnWoQfCq_pnckgbERz0aTQLBvDKyKtUTLM2LudPL-GSUQcdLvTZ0k3Cy-bHTPx75PJbwaSdPSiqz10NO_-DVihdOA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-3">
+<p class="text-on-primary font-label-bold text-label-bold">Future of AI in India</p>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<div class="font-caption text-caption text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+                            Oct 24, 2024 • 5:00 PM
+                        </div>
+<button class="px-4 py-1.5 border-1.5 border-primary text-primary font-label-bold text-label-bold rounded-lg hover:bg-primary-fixed transition-colors">
+                            Join
+                        </button>
+</div>
+</div>
+<!-- Learning Progress -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,35,126,0.05)]">
+<h4 class="font-headline-sm text-headline-sm text-on-background mb-4">Learning Progress</h4>
+<div class="flex items-start gap-4 mb-4">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">code</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-on-background">Python for Data Science</p>
+<p class="font-caption text-caption text-on-surface-variant">Module 4: Pandas Basics</p>
+</div>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 mb-2">
+<div class="bg-[#00B8D4] h-2 rounded-full" style="width: 65%"></div>
+</div>
+<p class="font-caption text-caption text-right text-on-surface-variant">65% Completed</p>
+</div>
+</div>
+</div>
+<!-- Recommended Section -->
+<section class="mt-stack-lg">
+<div class="flex justify-between items-end mb-6">
+<h3 class="font-headline-md text-headline-md text-on-background">Recommended for You</h3>
+<a class="font-label-bold text-label-bold text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,35,126,0.05)] border-t-4 border-primary hover:shadow-[0px_10px_30px_rgba(26,35,126,0.12)] transition-shadow flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary-fixed text-primary px-2 py-1 rounded font-caption text-caption font-bold">Scholarship</div>
+<span class="material-symbols-outlined text-secondary" title="Verified">verified</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-background mb-1">Reliance Foundation Scholars</h4>
+<p class="font-caption text-caption text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">corporate_fare</span>
+                        Reliance Foundation
+                    </p>
+<div class="mt-auto space-y-2 mb-6">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">payments</span>
+                            Up to ₹2,00,000
+                        </div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-error">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                            Ends in 5 Days
+                        </div>
+</div>
+<button class="w-full py-2 border-1.5 border-primary text-primary font-label-bold text-label-bold rounded-lg hover:bg-primary-fixed transition-colors">
+                        View Details
+                    </button>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,35,126,0.05)] border-t-4 border-primary hover:shadow-[0px_10px_30px_rgba(26,35,126,0.12)] transition-shadow flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-1 rounded font-caption text-caption font-bold">Fellowship</div>
+<span class="material-symbols-outlined text-secondary" title="Verified">verified</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-background mb-1">Tech Leaders Fellowship</h4>
+<p class="font-caption text-caption text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">corporate_fare</span>
+                        Plaksha University
+                    </p>
+<div class="mt-auto space-y-2 mb-6">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">payments</span>
+                            Full Tuition Cover
+                        </div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                            Nov 15, 2024
+                        </div>
+</div>
+<button class="w-full py-2 border-1.5 border-primary text-primary font-label-bold text-label-bold rounded-lg hover:bg-primary-fixed transition-colors">
+                        View Details
+                    </button>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_4px_20px_rgba(26,35,126,0.05)] border-t-4 border-primary hover:shadow-[0px_10px_30px_rgba(26,35,126,0.12)] transition-shadow flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-1 rounded font-caption text-caption font-bold">Grant</div>
+<span class="material-symbols-outlined text-secondary" title="Verified">verified</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-background mb-1">Women in Tech Grant</h4>
+<p class="font-caption text-caption text-on-surface-variant mb-4 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">corporate_fare</span>
+                        Google India
+                    </p>
+<div class="mt-auto space-y-2 mb-6">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm">payments</span>
+                            ₹1,50,000 + Mentorship
+                        </div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                            Dec 01, 2024
+                        </div>
+</div>
+<button class="w-full py-2 border-1.5 border-primary text-primary font-label-bold text-label-bold rounded-lg hover:bg-primary-fixed transition-colors">
+                        View Details
+                    </button>
+</div>
+</div>
+</section>
+</main>
+</body></html>
