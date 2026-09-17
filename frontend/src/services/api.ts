@@ -1,6 +1,6 @@
 // ERE-TN Unified API Client Service
-
-const API_BASE_URL = '/api';
+const rawBaseUrl = (import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || '/api').trim();
+const API_BASE_URL = rawBaseUrl.endsWith('/') ? rawBaseUrl.slice(0, -1) : rawBaseUrl;
 
 export interface ApiResponse<T> {
   data?: T;

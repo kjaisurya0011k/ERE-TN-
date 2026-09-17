@@ -3,6 +3,10 @@ backend/target/
 backend/.mvn/
 *.class
 *.jar
+data/
+backend/data/
+*.mv.db
+*.lock.db
 !**/src/main/**
 !**/src/test/**
 
